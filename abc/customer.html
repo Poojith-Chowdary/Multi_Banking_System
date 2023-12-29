@@ -1,0 +1,144 @@
+<!-- customerModule.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Module - Multi-Banking Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+    nav {
+      background-color: #444;
+      color: #fff;
+      padding: 0.5em;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 1em;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    section {
+      padding: 2em;
+      background-color: #fff;
+      margin: 1em 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 0.5em;
+    }
+
+    input {
+      padding: 0.5em;
+      margin-bottom: 1em;
+    }
+
+    button {
+      padding: 0.5em;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0.3;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Customer Module</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="admin.html">Admin Module</a></li>
+      <li><a href="customer.html">Customer Module</a></li>
+      <li><a href="bankAdmin.html">Bank Admin Module</a></li>
+      <li style="margin-left: auto;"><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Customer Module</h2>
+    <form>
+      <label for="deleteAccount">Delete Account:</label>
+      <input type="text" id="deleteAccount" name="deleteAccount" placeholder="Enter account deletion details">
+
+      <label for="viewAccountInfo">View Account Information:</label>
+      <input type="text" id="viewAccountInfo" name="viewAccountInfo" placeholder="Enter account information details">
+
+      <label for="updatePersonalDetails">Update Personal Details:</label>
+      <input type="text" id="updatePersonalDetails" name="updatePersonalDetails" placeholder="Enter personal details">
+
+      <label for="changePassword">Change Password:</label>
+      <input type="password" id="changePassword" name="changePassword" placeholder="Enter new password">
+
+      <label for="transferAmount">Transfer Amount:</label>
+      <input type="text" id="transferAmount" name="transferAmount" placeholder="Enter transfer amount details">
+
+      <label for="billPayment">Bill Payment:</label>
+      <input type="text" id="billPayment" name="billPayment" placeholder="Enter bill payment details">
+
+      <label for="transactionEnquiries">Transaction Enquiries:</label>
+      <input type="text" id="transactionEnquiries" name="transactionEnquiries" placeholder="Enter transaction enquiries details">
+
+      <label for="billingEnquiries">Billing Enquiries:</label>
+      <input type="text" id="billingEnquiries" name="billingEnquiries" placeholder="Enter billing enquiries details">
+
+      <label for="productServices">Product & Services and Contact Details:</label>
+      <input type="text" id="productServices" name="productServices" placeholder="Enter product & services details">
+
+      <label for="addNewAccount">Add New Account:</label>
+      <input type="text" id="addNewAccount" name="addNewAccount" placeholder="Enter new account details">
+
+      <!-- Other functionalities... -->
+
+      <button type="submit">Process Requests</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Multi-Banking Portal</p>
+  </footer>
+
+</body>
+</html>
