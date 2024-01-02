@@ -1,10 +1,10 @@
-<!-- customerModule.html -->
+<!-- createAccount.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Module - Multi-Banking Portal</title>
+  <title>Create Account - Multi-Banking Portal</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,17 +13,9 @@
       background-color: #f4f4f4;
       display: flex;
       flex-direction: column;
-      min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+      min-height: 100vh;
     }
-
-    header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1em 0;
-    }
-
-    nav {
+nav {
       background-color: #444;
       color: #fff;
       padding: 0.5em;
@@ -45,30 +37,17 @@
       color: #fff;
       font-weight: bold;
     }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
 
     section {
       padding: 2em;
       background-color: #fff;
       margin: 1em 0;
-    }
-
-    .options {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 1em;
-    }
-
-    .options a {
-      text-decoration: none;
-      color: #333;
-      padding: 1em;
-      background-color: #eee;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
-
-    .options a:hover {
-      background-color: #ddd;
     }
 
     footer {
@@ -78,12 +57,36 @@
       padding: 1em 0.3;
       margin-top: auto;
     }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    label {
+      margin-bottom: 0.5em;
+    }
+
+    select, input {
+      margin-bottom: 1em;
+      padding: 0.5em;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 0.7em;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Welcome to Customer Module</h1>
+    <h1>Create a New Account</h1>
   </header>
   <nav>
     <ul>
@@ -94,13 +97,24 @@
       <li style="margin-left: auto;"><a href="about.html">About Us</a></li>
     </ul>
   </nav>
-
   <section>
-    <h2>Customer Module</h2>
-    <div class="options">
-      <a href="createAccount.html">Create a New Account</a>
-      <a href="viewAccount.html">View Existing Account</a>
-    </div>
+    <form action="connect.php" method="post">
+      <label for="accountType">Account Type:</label>
+      <select id="accountType" name="accountType">
+        <option value="savings">Savings</option>
+        <option value="current">Current</option>
+      </select>
+
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required>
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required>
+
+      <!-- Add more relevant input fields as needed -->
+
+      <button type="submit">Create Account</button>
+    </form>
   </section>
 
   <footer>
